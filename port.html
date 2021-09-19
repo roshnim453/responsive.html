@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /*menu bar*/
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(44, 43, 43, 0.589);
+            position: sticky;
+            top: 0;
+        }
+        
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 20px 0px;
+        }
+        
+        .navbar ul li {
+            font-family: century;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 25px;
+            transition: all .5s ease;
+        }
+        
+        .navbar ul li a:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 10px white;
+        }
+        /*home page*/
+        
+        #home {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 840px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url('IMG-20191008-WA0012\ \(1\).jpg') no-repeat center center/cover;
+            height: 900px;
+            width: 100%;
+            z-index: -1;
+            opacity: .7;
+        }
+        
+        #home button {
+            font-family: century;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-left: 120px;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            transition: 1s ease;
+        }
+        
+        #home button:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 10px white;
+        }
+        
+        .headings {
+            font-family: centuary;
+            font-size: 3rem;
+            text-align: center;
+            margin: 40px 0px;
+        }
+        /*about me*/
+        
+        #about {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 50px;
+            background-color: rgb(124, 117, 103);
+            color: white;
+        }
+        
+        #pic {
+            display: flex;
+        }
+        
+        #pic img {
+            width: 575px;
+            height: 400px;
+        }
+        
+        #intro {
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            padding: 10px;
+            color: black;
+        }
+        
+        #intro h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        /*portfolio part*/
+        
+        #portfolio {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+        
+        .gallery img {
+            width: 360px;
+            height: 240px;
+            margin: 20px;
+        }
+        /*services*/
+        
+        #services {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: rgb(78, 75, 75);
+            color: white;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            color: black;
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 350px;
+            height: 450px;
+            border: 1px solid;
+            margin: 10px;
+            align-items: center;
+            text-align: justify;
+            position: relative;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: white;
+            justify-content: space-around;
+            transition: 1s ease;
+        }
+        
+        .box:hover {
+            box-shadow: 10px 10px 10px rgb(141, 138, 138);
+            transform: scale(0.8, 0.8);
+            background-color: wheat;
+        }
+        
+        .box img {
+            width: 50px;
+            height: 50px;
+        }
+        /*contact me*/
+        
+        #contact {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 50px;
+            color: white;
+            background-color: rgb(143, 144, 145);
+        }
+        
+        .info-container {
+            margin: 30px;
+            padding: 30px;
+            display: inline-flexbox;
+            text-align: center;
+            justify-content: space-around;
+            box-sizing: border-box;
+            background-color: wheat;
+            color: black;
+        }
+        
+        #address img {
+            height: 50px;
+            width: 50px;
+            margin-top: 30px;
+        }
+        
+        #contact_no img {
+            height: 50px;
+            width: 50px;
+            margin-top: 30px;
+        }
+        
+        #emailid img {
+            height: 50px;
+            width: 50px;
+            margin-top: 30px;
+        }
+        
+        .img {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            margin: 20px;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .navbar {
+                display: none;
+            }
+            #home::before {
+                height: 800px;
+            }
+            .toggle-btn {
+                width: 40px;
+                height: 40px;
+                margin-left: 50px;
+                border-radius: 5px;
+                box-shadow: black 3px 3px 3px 3px;
+            }
+            .toggle-btn span {
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                display: block;
+                margin: 6px 0px;
+            }
+            .navbar ul {
+                width: 100%;
+                height: 80vh;
+                background: cornflowerblue;
+                top: 80px;
+                left: 0;
+                text-align: center;
+            }
+            .navbar ul li {
+                display: block;
+            }
+            .navbar ul li a {
+                font-size: 20px;
+            }
+            .main .headings {
+                font-size: 2rem;
+                text-align: justify;
+                margin: 10px 10px;
+                padding-top: 100px;
+            }
+            .headings {
+                font-size: 2rem;
+            }
+            #pic {
+                display: block;
+            }
+            #pic img {
+                height: 500px;
+                width: 100%;
+            }
+            .gallery img {
+                width: 200px;
+                height: 200px;
+            }
+            .box {
+                width: 300px;
+                height: 400px;
+                box-sizing: border-box;
+            }
+            .box img {
+                width: 30px;
+                height: 30px;
+            }
+            .box .headings {
+                font-size: 2rem;
+            }
+            #intro h2 {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            #intro p {
+                font-size: 15px;
+            }
+            #home button {
+                margin-left: 50px;
+            }
+            .img {
+                height: 30px;
+                width: 30px;
+                float: right;
+                margin: 50px;
+                justify-content: space-between;
+            }
+            .info-container {
+                box-sizing: border-box;
+            }
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <button class="toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+
+    </nav>
+
+
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">I AM <br> ROSHNI MISHRA</h1>
+            <button> Download Resume</button>
+
+        </div>
+    </section>
+    <section id="about">
+        <h1 class="headings"> ABOUT ME</h1>
+
+        <div id="pic">
+            <img src="IMG-20191008-WA0012 (1).jpg">
+            <div id="intro">
+                <h2> ROSHNI MISHRA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Nemo mollitia officia corrupti possimus voluptates a quo exercitationem recusandae fugit praesentium! Assumenda vel ratione libero. Placeat minus inventore distinctio maiores
+                    earum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam numquam blanditiis,<br> quod dolore illum fugit, quasi perspiciatis voluptate, nulla cum magni facere excepturi labore? Delectus nesciunt autem ab similique iste!</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h1 class="headings">PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="pexel1.jpeg">
+            <img src="wp3417046.jpg">
+            <img src="xXbF2f.jpg">
+
+        </div>
+    </section>
+    <section id="services">
+        <h1 class="headings">SERVICES</h1>
+        <div class="row">
+            <div class="box">
+                <img src="OIP (1).jpg">
+
+                <h2 class="headings">Website Design</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate porro alias soluta iste, omnis quasi id nam obcaecati. Architecto velit similique, recusandae quisquam libero sint itaque. Ipsum ducimus quasi omnis rem. Cumque
+                    illum molestias deserunt, cupiditate facere quaerat quis ipsa? Quo et, quasi fugiat rerum quae similique rem praesentium.</p>
+
+
+            </div>
+            <div class="box">
+                <img src="OIP (1).jpg">
+
+                <h2 class="headings">UI/UX Design</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate porro alias soluta iste, omnis quasi id nam obcaecati. Architecto velit similique, recusandae quisquam libero sint itaque. Ipsum ducimus quasi omnis rem. Cumque
+                    illum molestias deserunt, cupiditate facere quaerat quis ipsa? Quo et, quasi fugiat rerum quae similique rem praesentium.</p>
+
+
+            </div>
+            <div class="box">
+                <img src="OIP (1).jpg">
+
+                <h2 class="headings">Digital Marketing</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate porro alias soluta iste, omnis quasi id nam obcaecati. Architecto velit similique, recusandae quisquam libero sint itaque. Ipsum ducimus quasi omnis rem. Cumque
+                    illum molestias deserunt, cupiditate facere quaerat quis ipsa? Quo et, quasi fugiat rerum quae similique rem praesentium.</p>
+
+
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="headings">CONTACT ME</h1>
+        <div class="info-container">
+            <div id="address">
+                <img src="R.png">
+                <h3>Address</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Nam perspiciatis sit vel alias ipsam labore.</p>
+            </div>
+            <div id="contact_no">
+                <img src="OIP (2).jpg">
+
+                <h3>Contact no:</h3>
+                <p>000-999-888</p>
+            </div>
+            <div id="emailid">
+                <img src="OIP (1).jpg ">
+                <h3>Email id</h3>
+                <p>roshnim453@gmail.com</p>
+            </div>
+            <div class="img">
+                <img src="OIP.jpg">
+                <img src="R.jpg">
+                <img src="R (1).png">
+            </div>
+
+        </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+
+
+
+
+    </section>
+
+</body>
+
+</html>
